@@ -8,6 +8,12 @@
 
 # testing
 /coverage
+# Playwright reports
+playwright-report/
+# Other test reports
+test-report/
+# All test results
+test-results/
 
 # test results
 test-results/.last-run.json

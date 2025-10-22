@@ -3,14 +3,14 @@ import resources from '@/src/mock/small/learning-resources.json';
 
 let inMemoryResources = [...resources];
 
-export async function GET(req: NextRequest, { params }: { params: { productId: string } }) {
-  const { productId } = params;
+export async function GET(req: NextRequest, context: { params: Promise<{ productId: string }> }) {
+  const { productId } = await context.params;
   const productResources = inMemoryResources.filter((r) => r.productId === productId);
   return NextResponse.json(productResources);
 }
 
-export async function POST(req: NextRequest, { params }: { params: { productId: string } }) {
-  const { productId } = params;
+export async function POST(req: NextRequest, context: { params: Promise<{ productId: string }> }) {
+  const { productId } = await context.params;
   const body = await req.json();
   const newResource = {
     id: `lr-${Date.now()}`,

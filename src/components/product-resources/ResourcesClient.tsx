@@ -76,16 +76,22 @@ export default function ResourcesClient({ productId }: { productId: string }) {
 
       <form onSubmit={submit} className='mt-4 space-y-2'>
         <div>
-          <label className='block text-sm'>Title</label>
+          <label htmlFor='resource-title' className='block text-sm'>
+            Title
+          </label>
           <input
+            id='resource-title'
             className='w-full border p-2'
             value={form.title}
             onChange={(e) => setForm({ ...form, title: e.target.value })}
           />
         </div>
         <div>
-          <label className='block text-sm'>Type</label>
+          <label htmlFor='resource-type' className='block text-sm'>
+            Type
+          </label>
           <select
+            id='resource-type'
             className='w-full border p-2 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white'
             value={form.type}
             onChange={(e) => setForm({ ...form, type: e.target.value })}
@@ -98,16 +104,22 @@ export default function ResourcesClient({ productId }: { productId: string }) {
           </select>
         </div>
         <div>
-          <label className='block text-sm'>URL</label>
+          <label htmlFor='resource-url' className='block text-sm'>
+            URL
+          </label>
           <input
+            id='resource-url'
             className='w-full border p-2 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white'
             value={form.url}
             onChange={(e) => setForm({ ...form, url: e.target.value })}
           />
         </div>
         <div>
-          <label className='block text-sm'>Description</label>
+          <label htmlFor='resource-description' className='block text-sm'>
+            Description
+          </label>
           <textarea
+            id='resource-description'
             className='w-full border p-2 bg-white dark:bg-neutral-800 text-gray-900 dark:text-white'
             value={form.description}
             onChange={(e) => setForm({ ...form, description: e.target.value })}

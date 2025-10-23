@@ -10,6 +10,8 @@
 /coverage
 # Playwright reports
 playwright-report/
+# Playwright HTML report
+playwright-report/index.html
 # Other test reports
 test-report/
 # All test results
